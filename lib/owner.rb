@@ -1,7 +1,6 @@
 require 'pry'
 
 class Owner
-  
   attr_reader :name, :species
   attr_accessor :owner
 
@@ -60,8 +59,10 @@ class Owner
   end
 
   def sell_pets
-    self.dogs.each {|sold, pets| sold.mood = "nervous" ||  sold.owner = nil
-    self.cats.each {|sold| sold.mood = "nervous" ||  sold.owner = nil
+    self.dogs.each {|sold, pets| sold.mood = "nervous"
+    sold.owner = nil}
+    self.cats.each {|sold| sold.mood = "nervous"
+    sold.owner = nil}
   end
 
   def list_pets
@@ -69,3 +70,4 @@ class Owner
   end
 
 end
+
